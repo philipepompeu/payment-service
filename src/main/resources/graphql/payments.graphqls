@@ -1,0 +1,18 @@
+type Query {
+  payments: [Payment!]
+}
+
+type Payment {
+  id: ID!
+  createdAt: String!
+  status: String!
+  orderId: String!  
+  value: Float!  
+  payerId: String!
+  payerEmail: String!
+  payerPhone: String!  
+}
+
+type Mutation {
+  updatePaymentToCompleted(id: ID!): Payment!
+}
